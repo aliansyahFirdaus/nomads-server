@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx nodemon app"
+    "dev": "npx nodemon app",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
@@ -21,6 +22,7 @@
     "sequelize-cli": "^6.4.1"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "nodemailer": "^6.7.3"
   }
 }
