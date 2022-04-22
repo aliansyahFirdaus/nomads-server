@@ -6,12 +6,14 @@ class Authentication {
     try {
       const { access_token } = req.headers;
 
+      console.log(access_token);
+
       const payload = readToken(access_token);
 
       const findUser = await User.findByPk(payload.id);
 
       if (!findUser) {
-        throw { name: "UNAUTHORIZE" };
+        throw { name: "UNAUTHORIZED" };
       } else {
         req.user = {
           userId: findUser.id,
