@@ -1,4 +1,5 @@
 module.exports = function (err, req, res, next) {
+  console.log(err);
   switch (err.name) {
     default:
       res.status(500).json({
